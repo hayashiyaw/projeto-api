@@ -1,26 +1,14 @@
-var http = require('http');
-var app = require('../app');
+const express = require('express')
+const cors = require('cors')
 
-var port = normalizePort(process.env.PORT || '3000');
-app.set('port', port);
+const routes = require('./routes/index')
 
-var server = http.createServer(app);
+const app = express()
 
-server.listen(port);
+app.use(cors())
+app.use(express.json())
+// app.use(routes)
 
-
-function normalizePort(val) {
-  var port = parseInt(val, 10);
-
-  if (isNaN(port)) {
-    // named pipe
-    return val;
-  }
-
-  if (port >= 0) {
-    // port number
-    return port;
-  }
-
-  return false;
-}
+app.listen(3333, () => {
+  console.log('Servidor rodando na porta http://localhost:3333')
+})
