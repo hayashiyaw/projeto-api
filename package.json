@@ -1,0 +1,8 @@
+{
+  "name": "projeto-git",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/hayashiyaw/projeto-api.git",
+  "author": "Willian <willian@dobesone.com.br>",
+  "license": "MIT"
+}
